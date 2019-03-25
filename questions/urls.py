@@ -4,4 +4,5 @@ from questions.views import AboutView
 
 urlpatterns = [
     url(r'^about$', AboutView.as_view(), name='about'),
+    url(r'^base', AboutView.as_view(), name='base'),
 ]
