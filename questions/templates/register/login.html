@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{%  extends 'questions/base.html' %}
+{% load static %}
+<html lang="en">
+
+<head>
+    <title>Base</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+
+                 {% block main-content %}
+                <div class="row justify-content-begin mt-3">
+                    <div class="col-xl-9 pr-4 " >
+                <h1 class="mt-5 mb-4 mx-4 text-center alert alert-warning">Log In</h1>
+
+                <div class="container-fluid mx-2 mb-3 mt-3">
+                    <div class="row">
+                        <div class="col-3 mt-3">
+                            <p>Login:</p>
+                        </div>
+                        <div class="col-lg-4 mt-3">
+                            <input type="text" class="form-control" placeholder="Your login">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid mx-2 mt-3">
+                    <div class="row">
+                        <div class="col-3 mt-3">
+                            <p>Password:</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <input type="password" class="form-control mt-2" placeholder="Your password">
+                        </div>
+                        <div class="col-5">
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <button class="btn text-center alert alert-warning mb-3 mx-2 mt-3 ">Log In</button>
+
+                    </div>
+
+                    <a href="{% url "register" %}" class="btn btn-info btn-lg btn-block mt-5">Create account</a>
+                </div>
+
+            </div>
+                </div>
+                {% endblock %}
+
+
+
+
+
+    <!--<div class ="container mt-2">-->
+    <!--<h1 class="display1">Пробую делать web</h1>-->
+    <!--</div>-->
+
+</body>
+
+</html>

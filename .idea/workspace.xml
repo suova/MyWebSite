@@ -2,13 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd73fbce-ca72-4e9d-92b2-555521b3c6cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/questions/static/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/questions/static/css/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/questions/static/css/a.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/questions/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/static/images/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/templates/questions/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/templates/questions/ask.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/templates/questions/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/templates/questions/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/templates/questions/paginator.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/templates/questions/question.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/templates/questions/tagThenQuestions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/templates/register/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/templates/register/accountSettings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/templates/register/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/templates/register/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ask_nkuznecova/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ask_nkuznecova/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ask_nkuznecova/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ask_nkuznecova/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questions/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/questions/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/questions/templates/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questions/templates/base.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/questions/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/questions/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/questions/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/questions/views.py" afterDir="false" />
     </list>
@@ -21,61 +33,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ask_nkuznecova/urls.py">
+        <entry file="file://$PROJECT_DIR$/questions/templates/questions/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+            <state relative-caret-position="182">
+              <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
               <folding>
-                <element signature="e#638#679#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/questions/templates/about.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ask_nkuznecova/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="108" column="17" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/questions/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2891">
-              <caret line="383" column="9" selection-start-line="383" selection-start-column="9" selection-end-line="383" selection-end-column="9" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#summary#0;n#details#0;n#div#0;n#div#2;n#details-menu#0;n#details#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#1;n#form#0;n#details-dialog#0;n#details#0;n#div#0;n#div#2;n#details-menu#0;n#details#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#form#0;n#details-dialog#0;n#details#0;n#div#0;n#div#2;n#details-menu#0;n#details#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#form#0;n#details-dialog#0;n#details#0;n#div#0;n#div#2;n#details-menu#0;n#details#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#button#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#form#0;n#details-dialog#0;n#details#0;n#div#0;n#div#2;n#details-menu#0;n#details#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#button#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#form#0;n#details-dialog#0;n#details#0;n#div#0;n#div#2;n#details-menu#0;n#details#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#button#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#form#0;n#details-dialog#0;n#details#0;n#div#0;n#div#2;n#details-menu#0;n#details#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#button#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#form#0;n#details-dialog#0;n#details#0;n#div#0;n#div#2;n#details-menu#0;n#details#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/questions/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
+                <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,8 +47,96 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/questions/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="6" column="52" lean-forward="true" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+            <state relative-caret-position="286">
+              <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ask_nkuznecova/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="572">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+              <folding>
+                <element signature="e#638#679#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/questions/templates/register/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="728">
+              <caret line="40" column="75" selection-start-line="40" selection-start-column="75" selection-end-line="40" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/questions/templates/questions/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="23" column="68" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/questions/templates/questions/paginator.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#826#833#0" expanded="true" />
+                <element signature="e#1416#1423#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/questions/templates/questions/tagThenQuestions.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-331">
+              <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/questions/templates/questions/question.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="735">
+              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/questions/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="579">
+              <caret line="78" column="27" selection-start-line="78" selection-start-column="27" selection-end-line="78" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#968#1444#0" />
+                <element signature="e#960#1418#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/questions/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -93,40 +144,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/questions/apps.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/questions/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/manage.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/questions/tests.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -137,24 +161,42 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/questions/about.html" />
-        <option value="$PROJECT_DIR$/ask_nkuznecova/settings.py" />
         <option value="$PROJECT_DIR$/questions/admin.py" />
         <option value="$PROJECT_DIR$/questions/models.py" />
         <option value="$PROJECT_DIR$/questions/static/css/css.xml" />
         <option value="$PROJECT_DIR$/questions/static/css/a.css" />
         <option value="$PROJECT_DIR$/questions/templates/about.html" />
-        <option value="$PROJECT_DIR$/ask_nkuznecova/urls.py" />
-        <option value="$PROJECT_DIR$/questions/urls.py" />
+        <option value="$PROJECT_DIR$/questions/templates/index.html" />
+        <option value="$PROJECT_DIR$/questions/templates/question.html" />
+        <option value="$PROJECT_DIR$/questions/templates/ask.html" />
+        <option value="$PROJECT_DIR$/questions/templates/login.html" />
+        <option value="$PROJECT_DIR$/questions/templates/signup.html" />
         <option value="$PROJECT_DIR$/questions/templates/base.html" />
+        <option value="$PROJECT_DIR$/ask_nkuznecova/settings.py" />
+        <option value="$PROJECT_DIR$/ask_nkuznecova/urls.py" />
+        <option value="$PROJECT_DIR$/questions/templates/register.html" />
+        <option value="$PROJECT_DIR$/questions/templates/questions/test.html" />
+        <option value="$PROJECT_DIR$/questions/templates/register/login.html" />
+        <option value="$PROJECT_DIR$/questions/templates/register/signup.html" />
+        <option value="$PROJECT_DIR$/questions/templates/questions/ask.html" />
+        <option value="$PROJECT_DIR$/questions/templates/register/register.html" />
+        <option value="$PROJECT_DIR$/questions/templates/register/accountSettings.html" />
+        <option value="$PROJECT_DIR$/questions/templates/questions/index.html" />
+        <option value="$PROJECT_DIR$/questions/templates/questions/question.html" />
+        <option value="$PROJECT_DIR$/questions/urls.py" />
+        <option value="$PROJECT_DIR$/questions/templates/questions/paginator.html" />
+        <option value="$PROJECT_DIR$/questions/templates/questions/base.html" />
+        <option value="$PROJECT_DIR$/questions/templates/questions/QuestionsForTag.html" />
+        <option value="$PROJECT_DIR$/questions/templates/register/Login.html" />
         <option value="$PROJECT_DIR$/questions/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1154" />
-    <option name="y" value="497" />
-    <option name="width" value="1398" />
-    <option name="height" value="1020" />
+    <option name="x" value="265" />
+    <option name="y" value="24" />
+    <option name="width" value="1396" />
+    <option name="height" value="1026" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -186,7 +228,34 @@
               <item name="ask_nkuznecova" type="b2602c69:ProjectViewProjectNode" />
               <item name="ask_nkuznecova" type="462c0819:PsiDirectoryNode" />
               <item name="questions" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ask_nkuznecova" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ask_nkuznecova" type="462c0819:PsiDirectoryNode" />
+              <item name="questions" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ask_nkuznecova" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ask_nkuznecova" type="462c0819:PsiDirectoryNode" />
+              <item name="questions" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ask_nkuznecova" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ask_nkuznecova" type="462c0819:PsiDirectoryNode" />
+              <item name="questions" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="questions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ask_nkuznecova" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ask_nkuznecova" type="462c0819:PsiDirectoryNode" />
+              <item name="questions" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="register" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -196,10 +265,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/questions/templates/register" />
+      <recent name="$PROJECT_DIR$/questions/templates/questions" />
       <recent name="$PROJECT_DIR$/questions" />
       <recent name="$PROJECT_DIR$/ask_nkuznecova" />
       <recent name="$PROJECT_DIR$/questions/templates" />
@@ -256,16 +328,25 @@
       <option name="presentableId" value="Default" />
       <updated>1553010527619</updated>
     </task>
+    <task id="LOCAL-00001" summary="try to add base.html">
+      <created>1553542051526</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1553542051526</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="130" y="-8" width="3070" height="1808" extended-state="6" />
+    <frame x="65" y="10" width="1535" height="890" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24933863" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3297055" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33034572" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -283,13 +364,11 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="try to add base.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="try to add base.html" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/questions/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ask_nkuznecova/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/questions/static/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -306,84 +385,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/questions/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/questions/templates/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/questions/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2891">
-          <caret line="383" column="9" selection-start-line="383" selection-start-column="9" selection-end-line="383" selection-end-column="9" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#summary#0;n#details#0;n#div#0;n#div#2;n#details-menu#0;n#details#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#1;n#form#0;n#details-dialog#0;n#details#0;n#div#0;n#div#2;n#details-menu#0;n#details#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#form#0;n#details-dialog#0;n#details#0;n#div#0;n#div#2;n#details-menu#0;n#details#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#form#0;n#details-dialog#0;n#details#0;n#div#0;n#div#2;n#details-menu#0;n#details#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#button#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#form#0;n#details-dialog#0;n#details#0;n#div#0;n#div#2;n#details-menu#0;n#details#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#button#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#form#0;n#details-dialog#0;n#details#0;n#div#0;n#div#2;n#details-menu#0;n#details#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#button#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#form#0;n#details-dialog#0;n#details#0;n#div#0;n#div#2;n#details-menu#0;n#details#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#button#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#form#0;n#details-dialog#0;n#details#0;n#div#0;n#div#2;n#details-menu#0;n#details#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ask_nkuznecova/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
-          <folding>
-            <element signature="e#638#679#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ask_nkuznecova/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="108" column="17" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/questions/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/ask_nkuznecova/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/questions/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/questions/urls.py">
+    <entry file="file://$PROJECT_DIR$/questions/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ask_nkuznecova/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/questions/templates/register.html" />
+    <entry file="file://$PROJECT_DIR$/questions/static/images/a.jpg" />
+    <entry file="file://$PROJECT_DIR$/questions/static/images/devochka-color.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/questions/static/images/malchik-color.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ask_nkuznecova/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="6" column="52" lean-forward="true" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2522">
+          <caret line="121" column="46" selection-start-line="121" selection-start-column="46" selection-end-line="121" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/questions/models.py">
+    <entry file="file://$PROJECT_DIR$/questions/templates/questions/ask.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        <state relative-caret-position="390">
+          <caret line="24" column="73" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/questions/templates/register/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="20" column="73" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/questions/templates/questions/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/questions/templates/register/accountSettings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="78" column="76" selection-start-line="78" selection-start-column="76" selection-end-line="78" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/questions/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
@@ -393,8 +456,97 @@
     <entry file="file://$PROJECT_DIR$/questions/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/ask_nkuznecova/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#638#679#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/questions/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/questions/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/questions/templates/questions/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="23" column="68" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/questions/templates/questions/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/questions/templates/questions/question.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/questions/templates/questions/paginator.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#826#833#0" expanded="true" />
+            <element signature="e#1416#1423#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/questions/templates/register/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="728">
+          <caret line="40" column="75" selection-start-line="40" selection-start-column="75" selection-end-line="40" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/questions/templates/questions/tagThenQuestions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-331">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/questions/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="78" column="27" selection-start-line="78" selection-start-column="27" selection-end-line="78" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#968#1444#0" />
+            <element signature="e#960#1418#0" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

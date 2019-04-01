@@ -1,8 +1,14 @@
-from django.conf.urls import url
+from django.urls import path
 
-from questions.views import AboutView
+from . import views
 
 urlpatterns = [
-    url(r'^about$', AboutView.as_view(), name='about'),
-    url(r'^base', AboutView.as_view(), name='base'),
+    path('', views.questions_list, name='questions_list'),
+    path('ask', views.ask_question, name='ask_question'),
+    path('question/<question_id>', views.question_question, name='question'),
+    path('tag/<tag_name>', views.tag_question, name='tag'),
+    path('login', views.login, name='login'),
+    path('register', views.register, name='register'),
+    path('settings', views.settings, name='settings'),
+
 ]

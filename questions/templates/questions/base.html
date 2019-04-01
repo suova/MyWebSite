@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Start</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #FF8C00;">
+        <img src="/static/images/9bfed720a932217bc87c0e02a269b891.jpg" width="40" height="40" class=" mr-2 rounded-circle">
+
+            <a class="navbar-brand  m-auto  text-dark  font-weight-bold" href="{% url  "questions_list" %}">      Questioning</a>
+        <button class="navbar-toggler collapsed " type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarCollapse" style="">
+            <form class="navbar-form mx=auto " action="#" >
+                <div class="input-group ml-3 my-auto">
+                    <input class="form-control  font-italic" type="text" placeholder="Input text">
+                    <div class="input-group-append">
+                        <a class="btn btn-light my-auto" role="button"  href="#" ><img src="/static/images/lupa.jpg" class="rounded" width="20" height="20"></a>
+                    </div>
+                </div>
+            </form>
+
+            <ul class="navbar-nav auto ml-auto mb-auto">
+                <a class="btn btn-outline-dark mr-5" role="button" href="{% url "ask_question"  %}" >Ask Question</a>
+                <li class="nav-item">
+
+                <a class="nav-link text-dark" href="{% url "settings" %}">Settings</a>
+                </li>
+                <li class="nav-item">
+
+                <a class="nav-link text-dark" href="{% url "login" %}">Sign In</a>
+                </li>
+
+                <!--<li class="px-2">-->
+                    <!--<div class="avatar-thumbnail mb-2">-->
+                        <!--<img src="#">-->
+                    <!--</div>-->
+                <!--</li>-->
+                <!--<li class="px-2">-->
+                    <!--<div class="text-white ml-3" style="display: block;">Name</div>-->
+                    <!--<a class="btn text-primary" href="#">settings</a>-->
+                    <!--<a class="btn text-primary" href="#">logout</a>-->
+                <!--</li>-->
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <div class="container ">
+        <div class="row ">
+             <div class="col-sm-9 mt-5 ">
+                  {% block main-content %}{% endblock %}
+            </div>
+            <div class="col-md-3  bg-light  alert alert-warning  ">
+                <div class="p-3 mb-3 mt-5  rounded position-fixed">
+
+                <div class="p-3 ">
+                    <h4 class="mb-3 ">Best Members</h4>
+                    <ol class="list mb-1">
+                        <li class="mb-1"><a href="#"><u>Mr. Freeman</u></a></li>
+                        <li class="mb-1"><a href="#"><u>Dr. House</u></a></li>
+                        <li class="mb-1"><a href="#"><u>Bender</u></a></li>
+                        <li class="mb-1"><a href="#"><u>Queen Victoriya</u></a></li>
+                        <li class="mb-1"><a href="#"><u>V. Pupkin</u></a></li>
+                    </ol>
+                </div>
+                    <div class="p-3 ">
+                     <h4 class="mb-3 ">Popular Tags</h4>
+                        <ol class="list mb-1">
+                        <li class="mb-1 text-secondary"><u>Perl</u></a></li>
+                        <li class="mb-1 text-success"><u>Python</u></a></li>
+                        <li class="mb-1 text-danger"><u>Ruby</u></a></li>
+                        <li class="mb-1 text-info"><u>Golang</u></a></li>
+                        <li class="mb-1 text-warning"><u>Java</u></a></li>
+                    </ol>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class ="container mt-2">-->
+    <!--<h1 class="display1">Пробую делать web</h1>-->
+    <!--</div>-->
+
+</body>
+
+</html>
