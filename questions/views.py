@@ -1,69 +1,85 @@
-from django.shortcuts import render
-from django.views.generic import TemplateView
-from .models import Post
-from django.core.paginator import Paginator
-
-# Create your views here.
-userGirl = ({'photo': 'images/devochka-color.jpg'})
-userBoy = ({'photo': 'images/malchik-color.jpg'})
-tags = []
-
-tags.append({'text': "C++"})
-tags.append({'text': "Java"})
-
-tags1 = []
-tags1.append({'text': "Golang"})
-tags1.append({'text': "Python"})
-questions = []
-for i in range(1, 10):
-    questions.append({
-        'id': i,
-        'title': "Can PowerShell script out SQL Server Reporting Services RDL files? " + str(i),
-        'content': "Is it possible to use PowerShell to script out SQL Server Reporting Services rdl files in SQL Server 2008? If so, can someone provide a code example of doing this? This would be a useful replacement for using a 3rd party tool to script out RDL files created by business users outside of my Business Intelligence department. " + str(
-            i),
-        'tags': tags1,
-        'author': userGirl
-    })
-for i in range(1, 10):
-    questions.append({
-        'id': i,
-        'title': "Debugging report error on SSRS " + str(i),
-        'content': "we have a bunch of reports (RDL) on SSRS built using officewriter. Sometimes errors occur in a report after updating the excel template. While the report renders fine, an error occurs on the server when trying to save the report using 'export to excel format for office writer' option. How do we debug to find the cause of the error? " + str(
-            i),
-        'tags': tags,
-        'author': userBoy
-    })
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
+from django.shortcuts import render, get_object_or_404
+from django.urls import reverse
+from questions.forms import *
+from .pagination import *
+from .models import *
+from django.contrib import auth
 
 
-def questions_list(request):
-    contact_list = questions
-    current_page = Paginator(contact_list, 4)
-    page = request.GET.get('page')
-    contacts = current_page.get_page(page)
-    return render(request, 'questions/index.html', {'questions': contacts})
+def index(request, page='1'):
+    questions = pagination(request, Question.objects.newest(), 4, page)
+    title = "New Questions"
+    return render(request, 'questions/index.html', {'questions': questions, 'title': title})
 
 
-def ask_question(request):
-    return render(request, 'questions/ask.html', {})
+def hot(request, page='1'):
+    questions_ = pagination(request, Question.objects.hot(), 5, page)
+    title = "Top Questions"
+    return render(request, 'questions/index.html', {'questions': questions_, 'title': title})
 
 
-def question_question(request, question_id):
-    return render(request, 'questions/question.html', {'id': question_id, 'question': questions[int(question_id)]})
+@login_required
+def ask(request):
+    if request.method == "POST":
+        form = QuestionForm(request.POST)
+        if form.is_valid():
+            q = form.save(request.user, 0)
+            return HttpResponseRedirect(reverse('question', kwargs={'question_id': q.id}))
+    else:
+        form = QuestionForm()
+    return render(request, 'questions/ask.html', {'form': form})
+
+def accounts(request):
+    return render(request, 'questions/accounts.html')
 
 
-def tag_question(request, tag_name):
-    if (tag_name):
-        tag = ({'text': tag_name})
 
-        contact_list = questions
-        current_page = Paginator(contact_list, 4)
-        page = request.GET.get('page')
-        contacts = current_page.get_page(page)
-    return render(request, 'questions/tagThenQuestions.html', {'tag': tag, 'questions': contacts})
+
+def question(request, question_id):
+    question_ = get_object_or_404(Question, pk=question_id)
+
+    answers = question_.answer_set.all()
+
+
+    if request.method == "POST":
+        form = AnswerForm(request.POST)
+
+        if form.is_valid():
+            answer = form.save(question_, request.user)
+            return HttpResponseRedirect(reverse('question', kwargs={'question_id': question_id}))
+    else:
+        form = AnswerForm()
+    return render(request, 'questions/question.html',
+                  {'question': question_, 'answers': answers, 'form': form})
+
+
+def tag_then_questions(request, tag_name, page=1):
+    tag_questions = Question.objects.tag_search(tag_name)
+    questions = pagination(request, tag_questions, 2, page)
+    return render(request, 'questions/tagThenQuestions.html', {'tag': tag_name, 'questions': questions})
 
 
 def login(request):
-    return render(request, 'register/login.html', {})
+    redirect = request.GET.get('continue', '/')
+    if request.user.is_authenticated:
+        return HttpResponseRedirect(redirect)
+    if request.method == "POST":
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            auth.login(request, form.cleaned_data['user'])
+            return HttpResponseRedirect(redirect)
+    else:
+        form = LoginForm()
+    return render(request, 'register/login.html', {'form': form})
+
+@login_required
+def logout(request):
+    redirect = request.GET.get('continue', '/')
+    auth.logout(request)
+    return HttpResponseRedirect(redirect)
+
 
 
 def settings(request):
@@ -71,9 +87,23 @@ def settings(request):
 
 
 def register(request):
-    return render(request, 'register/signup.html', {})
-# p = []
-#    for i in range(len(questions)):
- #       if questions['tags'][i] == tag['text']:
-  #          p.insert(questions[i])
-#python manage.py runserver
+    if request.method == "POST":
+        form = SignupForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            user.refresh_from_db()
+            user.email = form.cleaned_data.get('email')
+            user.avatar = form.cleaned_data.get('avatar')
+            user.save()
+            my_password = form.cleaned_data.get('password1')
+            user = authenticate(username=user.username, password=my_password)
+            auth.login(request, user)
+            return HttpResponseRedirect('/')
+        else:
+            print(form.is_valid())
+            print(form.errors)
+    else:
+        form = SignupForm()
+    return render(request, 'register/signup.html', {'form': form})
+
+# python manage.py runserver source venv/bin/activate
