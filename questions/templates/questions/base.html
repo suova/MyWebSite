@@ -40,11 +40,11 @@
                         </li>
                         <li class="px-2">
                             <div style="display: block; ">{{ user.username }}</div>
-                            <a href="{% url 'settings' %}" class="text-dark">settings</a>
-                            <a href="{% url 'logout' %}" class="text-dark">logout</a>
+                            <a href="{% url 'settings' pk=user.username %}" class="text-dark">settings</a>
+                            <a href="{% url 'logout' %}?continue={{ request.path }}" class="text-dark">logout</a>
                         </li>
                     {% else %}
-                        <li class="px-2 ml-1 mt-2"><a href="{% url 'login' %}"><i class="fas fa-sign-in-alt text-dark"></i> Login </a></li>
+                        <li class="px-2 ml-1 mt-2"><a href="{% url 'login' %}?continue={{ request.path }}"><i class="fas fa-sign-in-alt text-dark"></i> Login </a></li>
                         <li class="px-2 ml-2 mt-2"><a href="{% url 'register' %}"><i class="fas fa-user-astronaut text-dark"></i> Register </a></li>
                     {% endif %}
 
@@ -78,7 +78,6 @@
                         <ol class="list ">
                         <li class=" text-secondary"><u>Perl</u></a></li>
                         <li class="text-success"><u>Python</u></a></li>
-                        <li class="mb-1 text-danger"><u>Ruby</u></a></li>
                     </ol>
 
                     </div>

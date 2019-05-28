@@ -1,6 +1,9 @@
+from django.contrib.auth.decorators import login_required
 from django.urls import path
 
+from questions.models import LikeDislike, Question, Answer
 from . import views
+
 
 urlpatterns = [
     path('', views.index, name='questions'),
@@ -11,7 +14,18 @@ urlpatterns = [
     path('login', views.login, name='login'),
     path('logout', views.logout, name='logout'),
     path('register', views.register, name='register'),
-    path('settings', views.settings, name='settings'),
-    path('accounts/login/', views.accounts, name='accounts'),
+    path('settings/<pk>', views.settings, name='settings'),
+    path('question/<question_id>/like',
+         login_required(views.VotesView.as_view(model=Question, vote_type=LikeDislike.LIKE)),
+         name='article_like'),
+    path('question/<question_id>/dislike',
+         login_required(views.VotesView.as_view(model=Question, vote_type=LikeDislike.DISLIKE)),
+         name='article_dislike'),
+    path('question/<question_id>/like',
+         login_required(views.VotesView.as_view(model=Answer, vote_type=LikeDislike.LIKE)),
+         name='comment_like'),
+    path('question/<question_id>/dislike',
+         login_required(views.VotesView.as_view(model=Answer, vote_type=LikeDislike.DISLIKE)),
+         name='comment_dislike'),
 
 ]

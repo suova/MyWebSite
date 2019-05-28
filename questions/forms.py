@@ -7,6 +7,7 @@ from django import forms
 
 User = get_user_model()
 
+
 class LoginForm(forms.Form):
     login = forms.CharField(
         label='Login',
@@ -37,9 +38,17 @@ class SignupForm(UserCreationForm):
         widget=forms.ClearableFileInput(),
         required=False
     )
+
     class Meta:
         model = User
         fields = ('username', 'email', 'password1', 'password2', "avatar",)
+
+
+class AccountSettings(forms.ModelForm):
+
+    class Meta:
+        model = Profile
+        fields = ('username', 'email', 'avatar')
 
 
 
@@ -77,20 +86,11 @@ class QuestionForm(forms.Form):
         self.parse_tags(tags)
         for tag in self._tag_list:
             self.check_tag(tag)
-        # return self.check_tag(tag)
 
-    def save(self, user, id):
+    def save(self, user):
         data = self.cleaned_data
-        if id <= 0:
-            q = Question.objects.create(title=data.get('title'), text=data.get('text'),
-                                        author=user)
-        else:
-            q = Question.objects.get(pk=id)
-            q.title = data.get('title')
-            q.text = data.get('text')
-        q.tags.clear()
-
-        q.save()
+        q = Question.objects.create(title=data.get('title'), text=data.get('text'),
+                                    author=user)
 
         for tag_text in self._tag_list:
             if tag_text is not None and tag_text != '':

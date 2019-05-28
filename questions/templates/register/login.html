@@ -7,16 +7,20 @@
 
                  {% block main-content %}
               <div class="content ">
-	<div class="login text-warning border border-warning bg-light mt-5">
-		<div class="login-title mt-5 text-center ">
+	<div class="login text-warning  mt-5">
+		<div class="login-title mt-5  ">
             <p><h1>LOGIN</h1></p>
 		</div>
 		<form method="POST" enctype="multipart/form-data">
 			{% csrf_token %}
 			{% for f in form.visible_fields %}
-			<div class="login-form-group  mt-5 text-center">
-				<label for="{{ f.name }}">{{ f.label }}</label>
+			<div class="login-form-group  mt-5 ">
+				{{ f.label }}
+				<div
+				<label for="{{ f.name }}"></label>
+
 				{{ f }}
+			</div>
 			</div>
 			{% endfor %}
 			<button type="submit" class="btn btn-outline-dark mt-5 border border-warning center-block text-warning  login-btn">Submit</button>

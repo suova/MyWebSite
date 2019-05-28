@@ -1,11 +1,15 @@
+import json
+
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
+from django.views import View
+
 from questions.forms import *
 from .pagination import *
 from .models import *
-from django.contrib import auth
+from django.contrib import auth, messages
 
 
 def index(request, page='1'):
@@ -20,35 +24,30 @@ def hot(request, page='1'):
     return render(request, 'questions/index.html', {'questions': questions_, 'title': title})
 
 
-@login_required
 def ask(request):
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect('/login')
     if request.method == "POST":
         form = QuestionForm(request.POST)
         if form.is_valid():
-            q = form.save(request.user, 0)
+            q = form.save(request.user)
             return HttpResponseRedirect(reverse('question', kwargs={'question_id': q.id}))
     else:
         form = QuestionForm()
     return render(request, 'questions/ask.html', {'form': form})
 
-def accounts(request):
-    return render(request, 'questions/accounts.html')
-
-
-
 
 def question(request, question_id):
     question_ = get_object_or_404(Question, pk=question_id)
-
     answers = question_.answer_set.all()
-
 
     if request.method == "POST":
         form = AnswerForm(request.POST)
-
-        if form.is_valid():
-            answer = form.save(question_, request.user)
-            return HttpResponseRedirect(reverse('question', kwargs={'question_id': question_id}))
+        if request.user.is_authenticated:
+            if form.is_valid():
+                answer = form.save(question_, request.user)
+                return HttpResponseRedirect(reverse('question', kwargs={'question_id': question_id}))
+        return HttpResponseRedirect('/login')
     else:
         form = AnswerForm()
     return render(request, 'questions/question.html',
@@ -74,6 +73,7 @@ def login(request):
         form = LoginForm()
     return render(request, 'register/login.html', {'form': form})
 
+
 @login_required
 def logout(request):
     redirect = request.GET.get('continue', '/')
@@ -81,14 +81,58 @@ def logout(request):
     return HttpResponseRedirect(redirect)
 
 
+def settings(request, pk):
+    obj = get_object_or_404(Profile, username=pk)
 
-def settings(request):
-    return render(request, 'register/accountSettings.html', {})
+    form = AccountSettings(request.POST or None, instance=obj)
+
+    if form.is_valid():
+        print(form.cleaned_data.get('avatar'))
+        obj = form.save(commit=False)
+        print(obj.photo.url)
+        obj.save()
+        return HttpResponseRedirect('/index')
+
+    else:
+        p = {'form': form}
+    return render(request, 'register/accountSettings.html', p)
+
+
+class VotesView(View):
+    model = None  # Модель данных - Статьи или Комментарии
+    vote_type = None  # Тип комментария Like/Dislike
+
+    def post(self, request, pk):
+        obj = self.model.objects.get(pk=pk)
+        # GenericForeignKey не поддерживает метод get_or_create
+        try:
+            likedislike = LikeDislike.objects.get(content_type=ContentType.objects.get_for_model(obj), object_id=obj.id,
+                                                  user=request.user)
+            if likedislike.vote is not self.vote_type:
+                likedislike.vote = self.vote_type
+                likedislike.save(update_fields=['vote'])
+                result = True
+            else:
+                likedislike.delete()
+                result = False
+        except LikeDislike.DoesNotExist:
+            obj.votes.create(user=request.user, vote=self.vote_type)
+            result = True
+
+        return HttpResponse(
+            json.dumps({
+                "result": result,
+                "like_count": obj.votes.likes().count(),
+                "dislike_count": obj.votes.dislikes().count(),
+                "sum_rating": obj.votes.sum_rating()
+            }),
+            content_type="application/json"
+        )
 
 
 def register(request):
     if request.method == "POST":
-        form = SignupForm(request.POST)
+        form = SignupForm(request.POST, request.FILES)
         if form.is_valid():
             user = form.save()
             user.refresh_from_db()
